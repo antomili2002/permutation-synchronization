@@ -1,6 +1,6 @@
 import torch
 import pytest
-from model.perm_sync import perm_sync, error, error_against_ground_truth
+from permsync.perm_sync import perm_sync, error, error_against_ground_truth
 from scipy.optimize import linear_sum_assignment
 
 def generate_ground_truth(N, n):

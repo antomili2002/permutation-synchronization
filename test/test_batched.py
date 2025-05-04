@@ -1,6 +1,6 @@
 import torch
 import pytest
-from model.perm_sync_batched import perm_sync_batched, error_against_ground_truth_batched
+from permsync.perm_sync_batched import perm_sync_batched, error_against_ground_truth_batched
 
 
 def generate_ground_truth_batch(B, N, n):

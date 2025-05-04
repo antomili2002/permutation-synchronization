@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 from scipy.optimize import linear_sum_assignment
-from model.perm_sync import perm_sync
+from permsync.perm_sync import perm_sync
 
 def error_batched(T: torch.tensor, N: int, n: int):
     B = T.shape(0)
