@@ -47,7 +47,7 @@ def perm_sync(T: torch.tensor, N: int, n: int):
     
     for i in range(N):
         A = U[i * n : (i + 1) * n, :]
-        B = U[: n, : n].transpose(0, 1)
+        B = U[: n, : ].transpose(0, 1)
         P = (A @ B).real
         cost_matrix = torch.max(P) - P
         perm = hungarian_matching(cost_matrix)
