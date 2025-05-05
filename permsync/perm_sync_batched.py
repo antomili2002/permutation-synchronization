@@ -25,7 +25,7 @@ def error_against_ground_truth_batched(tau: torch.tensor, gt_perms:  torch.tenso
         for i in range(N):
             for j in range(N):
                 if i < j:
-                    gt_P_ij = gt_perms[b, i] @ torch.linalg.inv(gt_perms[b, j])
+                    gt_P_ij = gt_perms[b, i] @ gt_perms[b, j].T
                     total_errs[b] += torch.sum(torch.abs(tau[b, i, j] - gt_P_ij)) / 2
     return total_errs
 
